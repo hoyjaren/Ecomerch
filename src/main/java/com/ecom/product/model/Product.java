@@ -1,5 +1,6 @@
 package com.ecom.product.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -16,6 +17,6 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
-    @com.fasterxml.jackson.annotation.JsonBackReference
+    @JsonIgnoreProperties("products")
     private Category category;
 }
