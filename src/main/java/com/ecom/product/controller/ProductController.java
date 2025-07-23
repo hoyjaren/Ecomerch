@@ -2,6 +2,8 @@ package com.ecom.product.controller;
 
 import com.ecom.product.model.Product;
 import com.ecom.product.service.ProductService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,6 +27,18 @@ public class ProductController {
     @GetMapping("/category/{categoryId}")
     public List<Product> getAllProductsByCategory(@PathVariable Long categoryId){
         return productService.getProductByCategory(categoryId);
+    }
+
+    @PostMapping
+    public ResponseEntity<String> createProduct(@RequestBody Product product){
+        productService.saveProduct(product);
+        return ResponseEntity.ok("Product Added Successfully");
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteProduct(@PathVariable Long id){
+        productService.deleteProductById(id);
+        return ResponseEntity.ok("Product deleted successfully");
     }
 
 

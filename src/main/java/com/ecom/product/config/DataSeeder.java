@@ -21,7 +21,7 @@ public class DataSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        //Clear all Existing Data
+        /*Clear all Existing Data
         productRepository.deleteAll();
         categoryRepository.deleteAll();
 
@@ -39,14 +39,14 @@ public class DataSeeder implements CommandLineRunner {
 
         //Create Products
         Product phone = new Product();
-        phone.setName("SmarthPhone");
+        phone.setName("LoremIpsum");
         phone.setDescription("Latest model smarthphone with amazing features");
         phone.setImageUrl("https://placehold.co/600x400");
         phone.setPrice(7999.99);
         phone.setCategory(electronics);
 
         Product laptop = new Product();
-        laptop.setName("Laptop");
+        laptop.setName("LoremIpsums");
         laptop.setDescription("High Performance Laptop for work and Play");
         laptop.setImageUrl("https://placehold.co/600x400");
         laptop.setPrice(999.99);
@@ -66,8 +66,17 @@ public class DataSeeder implements CommandLineRunner {
         peak.setPrice(4794.99);
         peak.setCategory(shoes);
 
-        productRepository.saveAll(Arrays.asList(phone, laptop, teampayaman, peak));
+        Product manny = new Product();
+        manny.setName("Manny Pacquiao");
+        manny.setDescription("Edi Tipaklong");
+        manny.setImageUrl("https://www.meme-arsenal.com/memes/17d2b22c7d5715884ba85315b9c6fe67.jpg");
+        manny.setPrice(100000.000);
+        manny.setCategory(shoes);
 
+        Product manny2 = new Product();
+
+        productRepository.saveAll(Arrays.asList(manny, peak, phone, laptop, teampayaman));
+        */
 
     }
 }

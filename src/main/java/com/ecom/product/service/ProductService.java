@@ -22,4 +22,12 @@ public class ProductService {
     public List<Product> getProductByCategory(Long categoryid){
         return productRepository.findByCategoryId(categoryid);
     }
+
+    public Product saveProduct(Product product) {
+        return productRepository.save(product);
+    }
+
+    public void deleteProductById(Long id) {
+        productRepository.deleteById(id);
+    }
 }
