@@ -1,4 +1,4 @@
-# 🛒 Ecomerch Backend
+# 🛒 Ecomerch Backend - Ecommerce Product Catalog
 
 The **Ecomerch Backend** is a robust RESTful API built using **Java Spring Boot**. It powers the Ecomerch product catalog system and provides endpoints for managing product data, categories, and more. The backend is connected to a **MySQL** database and can be tested using tools like **Postman**.
 
